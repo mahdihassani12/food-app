@@ -2,6 +2,7 @@ import { StatusBar } from 'expo-status-bar';
 import React from 'react';
 import { StyleSheet, Text, View, FlatList } from 'react-native';
 import Home from './Screens/Home';
+import Detail from './Screens/Detail';
 import { NavigationContainer } from '@react-navigation/native'
 import { createStackNavigator} from '@react-navigation/stack'
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs'
@@ -56,6 +57,14 @@ function HomeStack(){
         component={Home}
         options = {{
             title: "Home Page"
+        }}
+      />
+
+      <Stack.Screen 
+        name="Detail"
+        component={Detail}
+        options = {{
+            title: "Detail Page"
         }}
       />
 

@@ -37,7 +37,7 @@ export default function App() {
       	numColumns={3} 
       	data={foods}
       	renderItem = { ({item}) =>{
-      		return <FoodItems name={item.name} image={item.image} price={item.price} />
+      		return <FoodItems name={item.name} image={item.image} price={item.price} detail={item.detail} />
       	} }
 
       />

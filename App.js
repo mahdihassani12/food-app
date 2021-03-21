@@ -16,24 +16,25 @@ export default function App() {
   return (
     <NavigationContainer>
         <Tab.Navigator
-          tabBarOptions = {{
-            activeTintColor: '#841548'
+          initialRouteName = "Food"
+          tabBarOptions={{
+            activeTintColor: '#841584'
           }}
         >
-        <Tab.Screens 
-        name="Home"
-        component={HomeStack}
-        options={{
-          tabBarLabel: 'Home',
-          tabBarIcon: ({color, size}) => (
-            <MaterialCommunityIcons 
-              name="home"
-              color={color}
-              size={size}
-            />
-          ),
-        }}
-        />
+          <Tab.Screen 
+           name="Home"
+           component={HomeStack}
+            options={{
+              tabBarLabel: "Home",
+              tabBarIcon: ({ color, size }) => (
+                <MaterialCommunityIcons 
+                  name="home"
+                  color={color}
+                  size={size}
+                />
+              )
+            }}
+          />
         </Tab.Navigator>      
     </NavigationContainer>
   );
@@ -42,6 +43,7 @@ export default function App() {
 function HomeStack(){
   return (
     <Stack.Navigator 
+      initialRouteName = "Home" 
       screenOptions={{
         headerStyle:{backgroundColor: '#841584'},
         headerTintColor: '#fff',

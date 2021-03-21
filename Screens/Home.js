@@ -48,7 +48,7 @@ export default function App() {
 
 const styles = StyleSheet.create({
   imageSliderContainer:{
-  	height:200,
+  	height:170,
   	margin: 10
   },
   imageSlider:{

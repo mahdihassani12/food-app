@@ -3,6 +3,7 @@ import React from 'react';
 import { StyleSheet, Text, View, FlatList } from 'react-native';
 import Home from './Screens/Home';
 import Detail from './Screens/Detail';
+import Favorite from './Screens/Favorite';
 import { NavigationContainer } from '@react-navigation/native'
 import { createStackNavigator} from '@react-navigation/stack'
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs'
@@ -36,6 +37,22 @@ export default function App() {
               )
             }}
           />
+
+          <Tab.Screen 
+           name="Favorite"
+           component={FavoriteStack}
+            options={{
+              tabBarLabel: "Favorite",
+              tabBarIcon: ({ color, size }) => (
+                <MaterialCommunityIcons 
+                  name="heart"
+                  color={color}
+                  size={size}
+                />
+              )
+            }}
+          />
+
         </Tab.Navigator>      
     </NavigationContainer>
   );
@@ -65,6 +82,29 @@ function HomeStack(){
         component={Detail}
         options = {{
             title: "Detail Page"
+        }}
+      />
+
+    </Stack.Navigator>
+  );
+}
+
+function FavoriteStack(){
+  return (
+    <Stack.Navigator 
+      initialRouteName = "Favorite" 
+      screenOptions={{
+        headerStyle:{backgroundColor: '#841584'},
+        headerTintColor: '#fff',
+        headerTitleStyle: {fontWeight: 'bold'}
+      }}
+    >
+
+      <Stack.Screen 
+        name="Favorite"
+        component={Favorite}
+        options = {{
+            title: "Favorite Page"
         }}
       />
 

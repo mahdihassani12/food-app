@@ -1,7 +1,7 @@
 import React from 'react';
 import { StyleSheet, Text, View, Image, FlatList,Button } from 'react-native';
 
-import ProfileItems from '../components/ProfileItems';
+import ProfileItems from '../Components/ProfileItems';
 
 export default function Profile() {
 

@@ -1,6 +1,6 @@
 import React from 'react';
 import { StyleSheet, Text, View, Image, FlatList,Button } from 'react-native';
-import FavoriteItems from '../components/FavoriteItems';
+import FavoriteItems from '../Components/FavoriteItems';
 
 
 export default function Favorite() {
